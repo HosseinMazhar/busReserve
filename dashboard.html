@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./img/logo-white-notitle.png">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./dashboard.css">
+    <title>حسین مظهر خوش آمدید</title>
+</head>
+<body>
+    <div id="container" dir="rtl">
+        <div id="profile">
+            <div id="profile-picture">
+                <div id="photo"></div>
+            </div>
+            <p id="name">حسین مظهر</p>
+            <p id="wallet-value-is">اعتبار کیف پول شما:</p>
+            <div id="wallet"></div>
+            <input type="checkbox" id="wallet-checkbox">
+            <label for="wallet-checkbox" id="checkbox-label">افزایش اعتبار</label>
+            <div id="increase-wallet-value">
+                <div id="pay-form">
+                    <form name="bank-form">
+                        <br>
+                        <br>
+                        <input type="number" id="price" placeholder="مبلغ">
+                        <br>
+                        <br>
+                        <p>شماره کارت:</p>
+                        <input type="text" maxlength="16" minlength="16" id="cardnumber">
+                        <p>CVV2</p>
+                        <input type="text" maxlength="4" minlength="3" id="cvv">
+                        <br>
+                        <br>
+                        <p id="exp">تاریخ انقضا:</p>
+                        <p class="card-date">ماه:</p>
+                        <input type="text" maxlength="2" minlength="2">
+                        <p class="card-date">سال:</p>
+                        <input type="text" maxlength="2" minlength="2">
+                        <br>
+                        <br>
+                        <p>رمز دوم:</p>
+                        <input type="password">
+                        <br>
+                        <br>
+                        <input type="submit" value="تایید پرداخت" id="confirm-button" class="prog-buttons" onclick="validation()">
+                        <label for="wallet-checkbox" id="reject-button" class="prog-buttons">بستن</label>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="ticket-part">
+            <h3>انتخاب بلیط</h3>
+            <div id="selecting-ticket">
+                <select name="tickets" id="tickets" onchange="selectTicket()">
+                    <option value="error">انتخاب مبدا و مقصد</option>
+                    <option value="BtoT17">بویین به تهران ساعت 17</option>
+                    <option value="BtoK17">بویین به کرج ساعت 17</option>
+                    <option value="BtoGH17">بویین به قزوین ساعت 17</option>
+                    <option value="BtoT15">بویین به تهران ساعت 15</option>
+                    <option value="BtoK15">بویین به کرج ساعت 15</option>
+                    <option value="BtoGH15">بویین به قزوین ساعت 15</option>
+                    <option value="TtoB8">تهران به بویین ساعت 8</option>
+                    <option value="KtoB8">کرج به بویین ساعت 8</option>
+                    <option value="GHtoB8">قزوین به بویین ساعت 8</option>
+                </select>
+                <select name="ticket-date" id="ticket-date">
+                    <option value="error">تاریخ مورد نظر</option>
+                    <option value="20th">20 خرداد</option>
+                    <option value="21th">21 خرداد</option>
+                    <option value="22th">22 خرداد</option>
+                </select>
+            </div>
+            <div id="priceToPay"></div>
+            <div id="ticket-buying-button">
+                <button onclick="buyticket()">خرید</button>
+            </div>
+        </div>
+
+    </div>
+    <script src="./dashboard.js"></script>
+</body>
+</html>

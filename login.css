@@ -1,0 +1,101 @@
+*{
+    background-color: rgba(96,235,232,255);
+}
+
+@font-face {
+    font-family: "main";
+    src: url(./fonts/Homa.ttf);
+}
+
+#container
+{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 550px;
+}
+
+#container .container-items
+{
+    width: 300px;
+    height: 300px;
+}
+
+#container #icon
+{
+    background-image: url(./img/1957.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#container #login-form
+{
+    flex-direction: column;
+    display: flex;
+    align-content: stretch;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(225, 231, 236);
+    border-radius: 20px;
+}
+
+#login-form h1
+{
+    background-color: rgb(225, 231, 236);
+    font-family: "main";
+    font-size: 20px;
+}
+
+#login-form form
+{
+    background-color: rgb(225, 231, 236);
+}
+
+form label
+{
+    background-color: rgb(225, 231, 236);
+    font-family: "main";
+    font-size: 13px;
+}
+
+form input
+{
+    background-color: rgb(225, 231, 236);
+    margin: 15px;
+    border-radius: 5px;
+    border: 1px solid rgb(32, 31, 31);
+    background-color: rgb(154, 164, 175);
+}
+
+form #submit-button
+{
+    width: 100px;
+    background-color: rgb(225, 231, 236);
+    margin: 0 52px;
+    font-size: 17px;
+    font-family: "main";
+    border-radius: 10px;
+    padding: 0 8px;
+    background-color: rgb(48, 139, 48);
+    color: rgb(225, 231, 236);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+form #submit-button:hover
+{
+    color: rgb(19, 18, 18);
+    background-color: rgb(109, 165, 109);
+}
+
+form .demos
+{
+    background-color: rgb(225, 231, 236);
+    font-family: "main";
+    color: rgb(211, 34, 34);
+    font-size: 11px;
+    padding-right: 20px;
+}
